@@ -45,17 +45,17 @@ const Cart=()=>
  return(
 <Base>
 <div>
-<Container className="mt-3">
+<Container>
             <div className="container-fluid">
                 <Row>
                     <Col md={
                         {
-                            size:10,
-                            offset:1
+                            size:6,
+                            offset:3
                         }
                     }>
 
-                        <h1 className="heading"><center>The Number of Total Books : {data?.length}</center></h1>
+                        <h1 className="heading2"><center>The Number of Total Books : {data?.length}</center></h1>
 
                         
 
@@ -64,6 +64,8 @@ const Cart=()=>
                                 <Bookl book={book} key={book.cid} deletePost={deletePost}/>
                             ))
                         }
+
+                              
 
                     </Col>
                 </Row>

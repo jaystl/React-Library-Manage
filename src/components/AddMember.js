@@ -83,13 +83,20 @@ const resetData=()=>
 }
 
     return(
-        <div className="wrapper">
+        <div className="wrapper"
+        style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            background: "red"
+          }}>
 
-            <Card>
+            <Card outline color="dark" style={{flex:1, backgroundColor:'beige', width: '30rem'}}>
 
                 <CardBody>
 {/* {JSON.stringify(post)} */}
-                    <h3>Fill All the Details for adding a member</h3>
+                    <h3>Fill Details For Members</h3>
 
                     <Form onSubmit={createUser}>
                         <div className="my-3">

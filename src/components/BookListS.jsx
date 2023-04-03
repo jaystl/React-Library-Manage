@@ -7,16 +7,18 @@ import { deleteBook } from '../services/s-user-service'
 import{toast} from 'react-toastify';
 import { useNavigate } from 'react-router-dom'
 import '../css/headings.css'
+import '../css/SearchBar.css'
+import SearchBarS from './SearchBarS'
 
 
 const BookListS=()=> {
 
 
     const [data, setdata] = useState()
+
+    const [searchInput, setSearchInput] = useState("");
+
     let navigate=useNavigate();
-
-
-
 
     useEffect(() => {
 
@@ -29,6 +31,13 @@ const BookListS=()=> {
         })
 
     }, [])
+
+    if (searchInput.length > 0) {
+        data.filter((value) => {
+            console.log(value)
+        return null;
+    });
+    };
     
     function deletePost(post) {
 
@@ -50,23 +59,24 @@ const BookListS=()=> {
         <Container className="mt-3">
             <div className="container-fluid">
                 <Row>
-                    <Col md={
-                        {
-                            size:10,
-                            offset:1
-                        }
-                    }>
-                        <h1 className="heading"><center><b>The Number of Total Books : {data?.length}</b></center></h1>
+                    <Col >
+                        <h1 className="heading2"><center><b>The Number of Total Books : {data?.length}</b></center></h1>
                         <Button color="success" onClick={()=> navigate("/staff/addnewbook")}>Add new Book</Button> <t/>
                         <Button color="primary" onClick={()=> navigate("/staff/memberlist")} >Go To Members List</Button>
+                        <div className='search'>
+                            <SearchBarS placeholder="Search Books" data={data}/>
+                        </div>
                          
                         
-
+                        
                         {
                             data?.map((book) => (
-                                <BookS book={book} key={book.bid} deletePost={deletePost}/>
+                                < BookS book={book} key={book.bid} deletePost={deletePost}/>
                             ))
                         }
+                        
+
+                        
 
                     </Col>
                 </Row>

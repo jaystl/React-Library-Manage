@@ -7,6 +7,7 @@ import {Button,Card,CardBody,Container,Form,FormGroup,Input,Label} from "reactst
 import { createPost as doCreatePost } from "../services/cart-service";
 import { loadAllBooks } from "../services/u-user-service";
 import { getCurrentUserDetail } from "../auth/indexS";
+import moment from "moment";
 
 const IssueBook=()=>{
 let navigate=useNavigate();
@@ -33,14 +34,15 @@ const[post,setPost]=useState({
      expirydate:''
 })
 
-function getCurrentDate(separator='-'){
+function getCurrentDate(){
 
     let newDate = new Date()
-    let date = newDate.getDate();
-    let month = newDate.getMonth() + 1;
-    let year = newDate.getFullYear();
+    // let date = newDate.getDate();
+    // let month = newDate.getMonth() + 1;
+    // let year = newDate.getFullYear();
     
-    return `${year}${separator}${month<10?`0${month}`:`${month}`}${separator}${date<10?`0${date}`:`${date}`}`
+    let date = `${newDate.getDate()}/${newDate.getMonth()+1}/${newDate.getFullYear()}`
+    return moment({date}).utc().format('YYYY-MM-DD')
 }
 
 const fieldChanged=(event)=>

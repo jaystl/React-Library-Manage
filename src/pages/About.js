@@ -5,11 +5,12 @@ const About=()=>
 {
     return(
         <Base>
-        <div className='text2'>
+        <div className='centered-div'>
+            
         <h1>
    <center><b>        
-   This project is given given by sterlite digital limited Library management System.
-   Where one can issue books and staff can delete and access members and have other functions too.
+   This is a project given by Sterlite Digital to complete a library web management system. 
+   As per given, all possible requirement are fullfilled in this project.
 </b> 
  </center>
         </h1>

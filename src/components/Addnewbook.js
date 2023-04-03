@@ -100,14 +100,22 @@ const resetData=()=>
 }
 
     return(
-        <div className="wrapper">
+        <div className="wrapper" style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            background: "red"
+          }}
+        >
 
-            <Card>
+
+            <Card outline color="dark" style={{flex:1, backgroundColor:'beige', width: '32rem'}}>
 
                 <CardBody>
 {/* {JSON.stringify(post)} */}
                       <Form onSubmit={createPost}>
-                    <h3>Fill All the Details for Adding a book</h3>
+                    <h3 className="text6">Fill Details</h3>
                         <div className="my-3">
                             <Label for="btitle">Enter Book title</Label>
                             <Input 
@@ -157,8 +165,8 @@ const resetData=()=>
 
                         <Container className="text-center">
                             
-                            <Button className="ms-2" type="submit" color="primary">Add Book</Button>
-                            <Button onClick={resetData} className="ms-2" color="danger">Reset Content</Button>
+                            <Button className="ms-2" type="submit" color="success">Add Book</Button>
+                            <Button onClick={resetData} className="ms-2" color="secondary">Reset Content</Button>
                         </Container>
 
                     </Form>

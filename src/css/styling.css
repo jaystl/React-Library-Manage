@@ -5,3 +5,38 @@
 .dropdownmenu{
     background-color: darkslategrey;
 }
+
+.text2 {
+    color:khaki;
+    font-size: 20px;
+}
+
+.text3{
+    color:inherit;
+    font-size: 20px;
+}
+
+.text4 {
+    color: darkgrey;
+    font-size: 15px;
+  }
+
+.text5 {
+    color:rgb(238, 233, 133);
+    font-size: 20px;
+    
+}
+
+.text6 {
+    color:brown;
+    font-size: 35px;
+}
+
+.centered-div {
+    color:rgb(238, 233, 133);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }

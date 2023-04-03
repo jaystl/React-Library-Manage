@@ -72,10 +72,20 @@ const SignupAsS = () => {
 return (
         <Base>
             <Container>
+            <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        background: "red"
+      }}
+    >
+      
 
                 {/* {JSON.stringify(data)} */}
 
-                <Card>
+                <Card outline color="dark" style={{ flex:1, backgroundColor:'beige', width: '18rem'}}>
                     <CardHeader>
                         <h3>Hi Staff Member , Please fill your details to Register</h3>
                     </CardHeader>
@@ -130,6 +140,7 @@ return (
                     </CardBody>
 
                 </Card>
+                </div>
             </Container>
         </Base>
     );

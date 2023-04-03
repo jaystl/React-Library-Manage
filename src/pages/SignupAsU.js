@@ -71,17 +71,28 @@ const SignupAsU = () => {
 return (
         <Base>
             <Container>
+            <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        background: "red"
+      }}
+    >
+      
+    
 
                 {/* {JSON.stringify(data)} */}
 
-                <Card>
-                    <CardHeader>
-                        <h3>Hi Library Member , Please fill your details to Register</h3>
+                <Card outline color="dark" style={{ flex:1, backgroundColor:'beige', width: '18rem'}}>
+                    <CardHeader> 
+                        <h3>Register for User. Fill Details </h3>
                     </CardHeader>
 
                     <CardBody>
 
-                        <Form onSubmit={submitForm}>
+                        <Form  onSubmit={submitForm}>
                             {/* name field */}
                             <FormGroup>
                                 <Label for="uname">Enter Full Name</Label>
@@ -129,6 +140,7 @@ return (
                     </CardBody>
 
                 </Card>
+                </div>
             </Container>
         </Base>
     );

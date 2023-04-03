@@ -27,6 +27,8 @@ import AfterIssue from './pages/Afterissue';
 import Afterbookdel from './pages/Afterbookdel';
 import Aftermemdel from './pages/Aftermemdel';
 import SearchPage from './pages/Searchpage';
+import SearchBar from './components/SearchBar';
+
 function App() {
   return (<>
     <BrowserRouter>
@@ -39,7 +41,8 @@ function App() {
      <Route path="/signupass" element={<SignupAsS/>}/>
      <Route path="/signupasu" element={<SignupAsU/>}/>
      <Route path="/about" element={<About/>}/>
-     <Route path="/search" element={<SearchPage/>}/>
+     <Route path="/search" element={<SearchBar/>}/>
+    
      
      <Route path="/category" element={<Category/>}/>
 

@@ -8,7 +8,7 @@ const Afterbookdel=()=>
     return(
     <div className="heading">
     <center>Your Book has Been Deleted .<br/>
-    Have A Great Day!! ;  <br/>
+    Add new Book for the Library!! ;  <br/>
     <Button color="primary" onClick={()=> navigate("/staff/booklists")} >Go To Book List</Button>
        </center> 
     </div>

@@ -75,7 +75,17 @@ console.log(data) ;
 return (
 <Base>
 <Container>
- <Card>
+<div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        background: "red"
+      }}
+    >
+
+ <Card outline color="dark" style={{ flex:1, backgroundColor:'beige', width: '18rem'}}>
 <CardHeader>
 <h3>Login For Staff</h3>
 </CardHeader>
@@ -117,6 +127,7 @@ value={loginDetail.password}
 </CardBody>
 
  </Card>
+ </div>
  </Container>
 </Base>
 )

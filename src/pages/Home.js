@@ -7,11 +7,11 @@ import '../css/card.css'
 const Home=()=>{
     return(<Base>
     
-            <div className="heading2">
+            <div className="heading">
                 <center>
-           WELCOME MEMBERS
-    </center>
-    <div className="text3">
+                  WELCOME TO LIBRARY SERVICE
+                </center>
+    {/* <div className="text3">
       <center>
         <b>
         "Libraries store the energy that fuels the imagination. <br/>
@@ -19,15 +19,8 @@ const Home=()=>{
         and achieve, and contribute to improving our quality of life."<br/>
         So keep Enjoying & Reading the Books and keep growing and learning.<br/>
         </b>
-        <Card className="card2">                                                      <br/>
-                                                                     <br/>
-                                                                     <br/>
-                                                                     <br/>
-                                                                     
-                                                                     
-                                      </Card>
-</center>
-    </div>
+      </center>
+    </div> */}
 </div>
 </Base>);
 };

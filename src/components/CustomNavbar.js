@@ -18,6 +18,7 @@ import { doLogout,getCurrentUserDetail,isLoggedIn } from '../auth/indexS';
 import '../css/styling.css'
 import'../css/headings.css'
 
+
 const CustomNavbar=()=>
 {
    let navigate=useNavigate()
@@ -46,12 +47,12 @@ const CustomNavbar=()=>
         expand='md'
         dark
         fixed="">
-        <NavbarBrand href="/"><b className='text5'>LIBRARY MANAGEMENT</b></NavbarBrand>
+        <NavbarBrand href="/"><b className='text3'>LIBRARY MANAGEMENT</b></NavbarBrand>
          <NavbarToggler onClick={toggle} />
          <Collapse isOpen={isOpen} navbar> 
           <Nav className="me-auto" >
             <NavItem>
-              <NavLink href="/" ><b className='text4'>HOME</b></NavLink>
+              <NavLink href="/" ><b className='text4' >HOME</b></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/category">
@@ -60,7 +61,7 @@ const CustomNavbar=()=>
               </NavItem>
               <NavItem> 
               <NavLink href="/user/cart">
-              <b className='text4'>MEMBER'S CART</b>
+              <b className='text4'>CART</b>
               </NavLink>
               </NavItem>
               {/* <NavItem> 
@@ -73,7 +74,12 @@ const CustomNavbar=()=>
               <b className='text4'>ABOUT</b>
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <NavItem>
+              <NavLink href="/user/booklist" >
+              <b className='text4'>BOOKS</b>
+              </NavLink>
+            </NavItem>
+            {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret >
               <b className='text4'>BOOKS</b>
               </DropdownToggle>
@@ -81,7 +87,7 @@ const CustomNavbar=()=>
                 <DropdownItem href="/user/booklist"><b className='text4'>Book access for user</b></DropdownItem>
                 
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
             </Nav>
             <Nav navbar>
                         {

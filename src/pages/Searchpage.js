@@ -25,7 +25,7 @@ function Searchpage() {
     <div className='row mt-5'>
         <center>
             <h3 className='text2'>Search by title</h3>
-      <input type="text" value={searchQuery} onChange={handleSearchChange} /></center>
+      <input type="search" value={searchQuery} onChange={handleSearchChange} /></center>
       {books.map(book => (
         <div key={book.bid}>
           <h3>{book.btitle}</h3>

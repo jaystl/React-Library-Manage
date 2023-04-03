@@ -5,6 +5,7 @@ import {toast} from 'react-toastify' ;
 import { loginU } from "../services/u-user-service";
 import { doLogin } from "../auth/indexS";
 import { useNavigate } from "react-router-dom";
+import '../css/card.css';
 
 const LoginAsS = () => {
 
@@ -42,7 +43,7 @@ event.preventDefault() ;
 
  //validation
 if(loginDetail.username.trim()=='' || loginDetail.password.trim()=='') {
-toast.error("User Credentials cann't be empty !!")
+toast.error("User Credentials can't be empty !!")
  return
 }
 //submit the data to server to generate the token for user
@@ -75,7 +76,19 @@ toast.success("User Login Success") ;
 return (
 <Base>
 <Container>
- <Card>
+
+  <div className="bg-image1">
+<div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        background: "red"
+      }}
+    >
+    
+ <Card outline color="dark" style={{flex:1, backgroundColor:'beige', width: '18rem'}}>
 <CardHeader>
 <h3>Login For Member</h3>
 </CardHeader>
@@ -117,6 +130,8 @@ value={loginDetail.password}
 </CardBody>
 
  </Card>
+ </div>
+ </div>
  </Container>
 </Base>
 )
